@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 200vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  min-height: 100vh;
+  max-width: 1300px;
+  margin-inline: auto;
+  padding: 10px;
+}
+.home {
+  border: 1px solid orange;
+}
+.home section {
+  border: 1px solid red;
+}
+
+.aside {
+  border: 1px solid blue;
+  padding: 10px;
+}
+
+.sidebar {
+  border: 1px solid red;
+  position: sticky;
+  top: 10px;
+}
