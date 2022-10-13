@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url('../img/bg.jpg') no-repeat top center fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100vh;
+}
+
+.card {
+  min-width: 250px;
+  width: 300px;
+}
+
+.card > .head {
+  position: relative;
+  background-color: #000000ea;
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  min-height: 35px;
+  padding: 0 5px;
+  /* flex */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card > .shadow.head {
+  box-shadow: 0 0 8px darkgray inset;
+}
+
+.head > .title {
+  color: #d9cc42;
+  text-align: center;
+  transition: 0.1s;
+  padding-right: 15px;
+}
+
+.head > .hide.title {
+  display: none;
+}
+
+.head > .toggle {
+  position: absolute;
+  right: 5px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.toggle > div {
+  border: 1px solid orange;
+  box-shadow: 0 0 5px magenta;
+  margin: 2px 3px;
+  width: 18px;
+  background-color: cyan;
+  transition: 0.1s;
+}
+
+.change > .bar1,
+.change > .bar3 {
+  background-color: lightgreen;
+}
+
+.change > .bar1 {
+  -webkit-transform: rotate(-40deg) translate(-5px, 1px);
+  transform: rotate(-40deg) translate(-5px, 1px);
+}
+
+.change > .bar2 {
+  opacity: 0;
+}
+
+.change > .bar3 {
+  -webkit-transform: rotate(40deg) translate(-5px, -1px);
+  transform: rotate(40deg) translate(-5px, -1px);
+}
+
+.head > .menu {
+  position: absolute;
+  text-align: left;
+  left: 100%;
+  right: 5px;
+  /* hide */
+  overflow: hidden;
+  transition: 0.1s;
+}
+
+.head > .menu > .item {
+  font-size: 20px;
+  color: #00ffff;
+  cursor: pointer;
+}
+
+.head > .menu > .item:hover {
+  color: #f00;
+}
+
+.head > .show.menu {
+  position: absolute;
+  padding: 0px 10px;
+  margin: 0 5px;
+  z-index: 0;
+  left: 0px;
+  right: 0px;
+  width: auto;
+  /* show */
+}
+
+.menu > .item.edit {
+  font-size: 20px;
+}
+
+.card > .body {
+  font-size: 14px;
+  padding: 10px;
+  min-height: 120px;
+  color: #bfffe9;
+  text-align: center;
+  background-color: #002222aa;
+}
+
+.card > .footer {
+  background-color: #000000dd;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card .footer > span {
+  padding: 3px 5px;
+  color: #aacc09;
+}
