@@ -1,0 +1,106 @@
+/* reset code */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 0.625rem;
+}
+
+/* main header */
+.main-header {
+  position: relative;
+  height: 100vh;
+  background-color: #222830;
+}
+
+/* header content */
+.header-title {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.header-title h1 {
+  font-size: 5rem;
+}
+
+.header-title p {
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+
+.header-title p span {
+  text-transform: lowercase;
+}
+
+/* header navbar */
+.header-navbar {
+  display: flex;
+  padding: 1rem 1.5rem;
+  gap: 0.5rem;
+}
+
+.nav-menu {
+  flex: 1;
+  padding: 0 1rem;
+  z-index: 1;
+}
+
+.nav-menu .links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  list-style-type: none;
+  height: 100%;
+}
+
+.links li,
+.links .active {
+  border-radius: 2rem;
+}
+
+.links li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 8rem;
+  font-size: 1.7rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 0.5rem 1.5rem;
+  color: white;
+}
+
+.nav-menu .links .active {
+  background-color: #04bd70;
+  pointer-events: none;
+}
+
+.nav-menu .links li:not(.active) a:hover {
+  color: #04bd70;
+}
+
+.nav-logo {
+  z-index: 1;
+}
+
+.nav-logo .logo {
+  height: 60px;
+}
