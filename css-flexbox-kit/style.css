@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* 1rem = 16px > default */
+  /* 10px/16px = 0.625rem */
+
+  /* 1rem = 10px */
+  font-size: 0.625rem;
+}
+
+body {
+  display: flex;
+  align-items: center;
+
+  background-color: #19242e;
+
+  height: 100vh;
+  padding: 1rem;
+}
+
+.container {
+  background-color: #0e1820aa;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: 90%;
+  min-width: 80%;
+  /* -----------------------------------
+
+           * try here *
+
+  -------------------------------------- */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.container .box {
+  cursor: pointer;
+
+  border-radius: 5px;
+  font-size: 1.5rem;
+
+  min-width: 5rem;
+  min-height: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .box-1 {
+  background-color: #f4e185;
+}
+.container .box-2 {
+  background-color: #f3c892;
+}
+.container .box-3 {
+  background-color: #e8c07d;
+}
+.container .box-4 {
+  background-color: #bbcf20;
+}
+.container .box-5 {
+  background-color: #a0c927;
+}
+.container .box-6 {
+  background-color: #6fe3cc;
+}
+.container .box-7 {
+  background-color: #1fe1de;
+}
+.container .box-8 {
+  background-color: #1fdea2;
+}
+.container .box-9 {
+  background-color: #c68eff;
+}
+.container .box-10 {
+  background-color: #ff8ecf;
+}
