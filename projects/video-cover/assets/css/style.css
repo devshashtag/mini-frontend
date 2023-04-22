@@ -1,0 +1,17 @@
+.drop-area {
+  width: 50%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: darkred;
+  text-transform: capitalize;
+  box-shadow: 0 0 10px 3px darkred inset;
+  border-radius: 5px;
+}
+
+.drop-area.highlight {
+  box-shadow: 0 0 10px 3px darkcyan inset;
+  color: darkcyan;
+}
