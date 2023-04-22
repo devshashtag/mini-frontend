@@ -1,0 +1,100 @@
+:root {
+    --size:200px;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    height:100vh;
+    background-color:#000;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.head {
+    position:relative;
+    background-color:#ada1;
+    width:var(--size);
+    height:var(--size);
+    border-radius:10px;
+    box-shadow: 0 0 calc(var(--size)/20) #5a58 inset,
+                0 0 calc(var(--size)/20) #5a5a;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items:center;
+    padding: 0 10px;
+}
+
+.head:before,
+.head:after {
+    content:"";
+    display:inline-block;
+    width:calc(var(--size)/12);
+    height:calc(var(--size)/6);
+    border-radius:calc(var(--size)/50);
+    margin-bottom:30%;
+    background-color:#afa4;
+
+    box-shadow: 0 0 calc(var(--size)/10) cyan inset;
+filter: ;
+    animation-name: blink_eye;
+    animation-name: color_hue;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+.mouth {
+    position:absolute;
+
+    margin-bottom:-60%;
+
+    display:inline-block;
+    width:calc(var(--size)/3);
+    height:calc(var(--size)/15);
+    border-radius:4px;
+    background-color:#afa4;
+    box-shadow: 0 0 calc(var(--size)/10) crimson inset;
+    cursor:pointer;
+    animation-name: color_hue;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes color_hue {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes blink_eye {
+    0% {
+        height:calc(var(--size)/6);
+        border-radius:calc(var(--size)/50);
+        background-color:#afa4;
+    }
+    50% {
+        width:calc(var(--size)/9);
+        height:calc(var(--size)/5);
+        border-radius:calc(var(--size)/48);
+        background-color:#f884;
+        box-shadow: 0 0 calc(var(--size)/10) #8f85 inset,
+                    0 0 calc(var(--size)/10) #f885;
+    }
+    100% {
+        height:calc(var(--size)/6);
+        border-radius:calc(var(--size)/50);
+        background-color:#afa4;
+    }
+}
