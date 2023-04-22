@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  scroll-behavior: smooth;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.color-generator {
+  display: flex;
+  flex-direction: column;
+
+  height: 90%;
+  width: 80%;
+
+  margin: 0 auto;
+}
+
+#randomColor {
+  background-color: #182d4c;
+
+  color: white;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  /* no-select */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#randomColor:hover {
+  background-color: #1e375c;
+}
+
+#copyColor {
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.history {
+  background-color: #b6c2cc;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, auto));
+  justify-items: center;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  overflow: scroll;
+}
+
+.history::-webkit-scrollbar {
+  display: none;
+}
+
+.history > .hist-item {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+
+  transition: all 0.2s;
+}
+
+.history .active {
+  cursor: pointer;
+  outline: 2px #093110 dashed;
+  outline-offset: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .color-generator {
+    width: 90%;
+  }
+
+  #randomColor,
+  #copyColor {
+    font-size: 12px;
+  }
+
+  .history {
+    grid-template-columns: repeat(auto-fill, minmax(25px, auto));
+    gap: 8px;
+  }
+
+  .history > .hist-item {
+    width: 25px;
+    height: 25px;
+  }
+}
