@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>image filters</title>
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- uploader section -->
+    <div class="upload-area">
+      <label class="upload-file">
+        <span class="file-btn">برای انتخاب عکس اینجا کلیک کنید</span>
+        <input type="file" name="image-input" id="upload-file" accept="image/*" />
+      </label>
+      <div class="area-title">یا فایل خود را به این قسمت کشیده و رها کنید</div>
+    </div>
+
+    <!-- edit section -->
+    <main class="edit__area">
+      <!-- editing image -->
+      <div class="area__img">
+        <button class="close-img" onclick="closeImage()">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <img id="img-filter">
+      </div>
+      <!-- filters -->
+      <div class="area__filters">
+        <ul>
+          <li class="tool">
+            <img class="filter-normal">
+            <div class="title">normal</div>
+          </li>
+          <li class="tool">
+            <img class="filter-grayscale">
+            <div class="title">grayscale</div>
+          </li>
+          <li class="tool">
+            <img class="filter-grayscale2">
+            <div class="title">grayscale2</div>
+          </li>
+          <li class="tool">
+            <img class="filter-blur">
+            <div class="title">blur</div>
+          </li>
+          <li class="tool">
+            <img class="filter-contrast">
+            <div class="title">contrast</div>
+          </li>
+          <li class="tool">
+            <img class="filter-hue-rotate">
+            <div class="title">hue-rotate</div>
+          </li>
+          <li class="tool">
+            <img class="filter-drop-shadow">
+            <div class="title">drop-shadow</div>
+          </li>
+          <li class="tool">
+            <img class="filter-brightness">
+            <div class="title">brightness</div>
+          </li>
+          <li class="tool">
+            <img class="filter-invert">
+            <div class="title">invert</div>
+          </li>
+          <li class="tool">
+            <img class="filter-saturate">
+            <div class="title">saturate</div>
+          </li>
+          <li class="tool">
+            <img class="filter-sepia">
+            <div class="title">sepia</div>
+          </li>
+          <li class="tool">
+            <img class="filter-multiple">
+            <div class="title">multiple</div>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <!-- scrips -->
+  <script src="assets/js/index.js"></script>
+</body>
+
+</html>
