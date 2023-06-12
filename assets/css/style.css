@@ -32,8 +32,9 @@ video {
 }
 
 ::-webkit-scrollbar {
-  background-color: ;
+  background-color: var(--color-blue);
   color: #bcb4a8;
+  width: 1rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -115,36 +116,53 @@ main.home .home__projects .projects__cards {
   padding: 1rem;
 }
 
-main.home .category__card {
+main.home .projects__card {
   position: relative;
+  min-height: 20rem;
 }
 
-main.home .category__card .card__image {
+main.home .projects__card img {
   cursor: pointer;
-  height: 100%;
 }
 
-main.home .category__card .card__caption {
-  cursor: pointer;
+main.home .projects__card a {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  visibility: hidden;
-  opacity: 0;
+}
+
+main.home .projects__card .card__caption {
+  cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  text-align: center;
-  line-height: 2;
-  background-color: #121212dd;
-  color: #e6c92a;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  visibility: hidden;
+  opacity: 0;
+
   font-size: 1.4rem;
   font-weight: 400;
+  text-align: center;
   text-transform: capitalize;
-  transition: all 0.3s;
+  padding: 1rem;
+  background-color: #121212dd;
+  color: #e6c92a;
+
+  transition: all 0.2s ease;
+}
+
+main.home .projects__card:hover .card__caption {
+  visibility: visible;
+  opacity: 1;
 }
 
 @media (min-width: 576px) {
@@ -154,22 +172,9 @@ main.home .category__card .card__caption {
 }
 
 @media (min-width: 768px) {
-  main.home {
-    padding: 2rem 3rem;
-  }
-
-  main.home .category__card:not(.modal--active):hover .card__caption {
-    visibility: visible;
-    opacity: 1;
-  }
 }
 
 @media (min-width: 992px) {
-  main.home {
-    flex-direction: row;
-    padding: 2rem 4rem;
-  }
-
   main.home .home__projects .projects__cards {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
