@@ -1,6 +1,6 @@
 'use strict';
 
-async function displayCards(url, root = '/mini-frontend') {
+async function displayCards(root = '/mini-frontend') {
   const projectsAPI = root + '/assets/js/projects.json';
   const projectRoot = root + '/projects';
 
@@ -20,5 +20,7 @@ async function displayCards(url, root = '/mini-frontend') {
     projectsElement.insertAdjacentHTML('beforeend', projectTemplate);
   }
 }
+const isLocalHost = ['localhost', '127.0.0.1', '::1', ''].includes(window.location.hostname);
+const root = isLocalHost ? '' : '/mini-frontend';
 
-displayCards();
+displayCards(root);
