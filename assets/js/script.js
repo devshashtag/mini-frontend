@@ -12,7 +12,7 @@ function projectTemplate(project, root = '/projects') {
 }
 
 async function displayCards(url) {
-  const projectsAPI = '/assets/js/projects.json';
+  const projectsAPI = '/mini-frontend/assets/js/projects.json';
   const projects = await fetch(projectsAPI).then((resp) => resp.json());
   const projectsElement = document.getElementById('projects');
 
