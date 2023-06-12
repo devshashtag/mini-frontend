@@ -1,23 +1,23 @@
 'use strict';
 
-function projectTemplate(project, root = '/projects') {
-  return `
-    <!-- ${project.name} -->
-    <div class="projects__card">
-        <img src="${project.image}" alt="${project.name}" loading="lazy" />
-        <div class="card__caption">${project.name}</div>
-        <a href="${root + project.url}" target="_blank"></a>
-    </div>
-  `;
-}
+async function displayCards(url, root = '/mini-frontend') {
+  const projectsAPI = root + '/assets/js/projects.json';
+  const projectRoot = root + '/projects';
 
-async function displayCards(url) {
-  const projectsAPI = '/mini-frontend/assets/js/projects.json';
   const projects = await fetch(projectsAPI).then((resp) => resp.json());
   const projectsElement = document.getElementById('projects');
 
   for (const project of projects) {
-    projectsElement.insertAdjacentHTML('beforeend', projectTemplate(project));
+    const projectTemplate = `
+      <!-- ${project.name} -->
+      <div class="projects__card">
+          <img src="${root + project.image}" alt="${project.name}" loading="lazy" />
+          <div class="card__caption">${project.name}</div>
+          <a href="${projectRoot + project.url}" target="_blank"></a>
+      </div>
+    `;
+
+    projectsElement.insertAdjacentHTML('beforeend', projectTemplate);
   }
 }
 
