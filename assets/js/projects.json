@@ -1,13 +1,8 @@
 [
   {
-    "url": "/flexbox-kit",
-    "name": "flexbox kit",
-    "image": "/assets/images/flexbox-kit.png"
-  },
-  {
-    "url": "/reponsive-one-page",
-    "name": "reponsive one page",
-    "image": "/assets/images/reponsive-one-page.png"
+    "url": "/web-template",
+    "name": "web template",
+    "image": "/assets/images/web-template.png"
   },
   {
     "url": "/sidebar-menu",
@@ -15,9 +10,29 @@
     "image": "/assets/images/sidebar-menu.png"
   },
   {
+    "url": "/bmi-calculator",
+    "name": "bmi calculator",
+    "image": "/assets/images/bmi-calculator.png"
+  },
+  {
+    "url": "/responsive-navbar",
+    "name": "responsive navbar",
+    "image": "/assets/images/responsive-navbar.png"
+  },
+  {
+    "url": "/main-header",
+    "name": "main header",
+    "image": "/assets/images/main-header.png"
+  },
+  {
     "url": "/selling-template",
     "name": "selling template",
     "image": "/assets/images/selling-template.png"
+  },
+  {
+    "url": "/flexbox-kit",
+    "name": "flexbox kit",
+    "image": "/assets/images/flexbox-kit.png"
   },
   {
     "url": "/simple-chart",
@@ -25,9 +40,9 @@
     "image": "/assets/images/simple-chart.png"
   },
   {
-    "url": "/bmi-calculator",
-    "name": "bmi calculator",
-    "image": "/assets/images/bmi-calculator.png"
+    "url": "/windows-calculator",
+    "name": "windows calculator",
+    "image": "/assets/images/windows-calculator.png"
   },
   {
     "url": "/image-filters",
@@ -35,14 +50,19 @@
     "image": "/assets/images/image-filters.png"
   },
   {
+    "url": "/video-cover",
+    "name": "video cover",
+    "image": "/assets/images/video-cover.png"
+  },
+  {
     "url": "/color-generator",
     "name": "color generator",
     "image": "/assets/images/color-generator.png"
   },
   {
-    "url": "/flexbox-kit",
-    "name": "flexbox kit",
-    "image": "/assets/images/flexbox-kit.png"
+    "url": "/space-stars",
+    "name": "space stars",
+    "image": "/assets/images/space-stars.png"
   },
   {
     "url": "/note-app",
@@ -65,38 +85,13 @@
     "image": "/assets/images/javascript-mini.png"
   },
   {
-    "url": "/main-header",
-    "name": "main header",
-    "image": "/assets/images/main-header.png"
-  },
-  {
-    "url": "/position-sticky-relative-to-parent",
-    "name": "position sticky relative to parent",
-    "image": "/assets/images/position-sticky-relative-to-parent.png"
-  },
-  {
-    "url": "/responsive-navbar",
-    "name": "responsive navbar",
-    "image": "/assets/images/responsive-navbar.png"
-  },
-  {
-    "url": "/space-stars",
-    "name": "space stars",
-    "image": "/assets/images/space-stars.png"
+    "url": "/sticky-relative-to-parent",
+    "name": "sticky relative to parent",
+    "image": "/assets/images/sticky-relative-to-parent.png"
   },
   {
     "url": "/strength-potion",
     "name": "strength potion",
     "image": "/assets/images/strength-potion.png"
-  },
-  {
-    "url": "/video-cover",
-    "name": "video cover",
-    "image": "/assets/images/video-cover.png"
-  },
-  {
-    "url": "/windows-calculator",
-    "name": "windows calculator",
-    "image": "/assets/images/windows-calculator.png"
   }
 ]

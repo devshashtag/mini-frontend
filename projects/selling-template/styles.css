@@ -48,7 +48,6 @@ header.header {
 .menu-brand a {
   text-transform: capitalize;
   font-weight: bold;
-  word-spacing: -1rem;
   text-decoration: none;
   color: var(--fg-color);
 }

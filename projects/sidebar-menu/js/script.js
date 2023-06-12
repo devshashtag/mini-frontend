@@ -1,33 +1,33 @@
 //* set evebts when page loaded
 window.addEventListener('DOMContentLoaded', function () {
-  const sidenav = document.querySelector('.sidebar .sidebar__nav');
+  const sideBarNav = document.querySelector('.sidebar .sidebar__nav');
 
   // functions
-  const isSelectableBtn = (el) => {
-    return el.classList.contains('nav__btn') && !el.classList.contains('is-active');
+  const isBtnSelectable = (target) => {
+    const parent = target.parentNode;
+    const isSelectable = (element) => {
+      return element.classList.contains('nav__btn') && !element.classList.contains('is-active');
+    };
+
+    if (isSelectable(target)) return target;
+    if (isSelectable(parent)) return parent;
   };
 
-  const removeActiveClass = (cls) => {
-    const activeElm = document.querySelector(cls);
-    activeElm.classList.remove('is-active');
-  };
+  const removeActiveClass = (className) => document.querySelector(className).classList.remove('is-active');
 
-  sidenav.addEventListener('click', (el) => {
-    let target = isSelectableBtn(el.target) ? el.target : null;
+  sideBarNav.addEventListener('click', (e) => {
+    let target = isBtnSelectable(e.target);
 
-    target = isSelectableBtn(el.target.parentNode) ? el.target.parentNode : target;
+    if (!target) return;
 
-    if (target) {
-      // remove active button and page
-      removeActiveClass('.sidebar__nav .nav__btn.is-active');
-      removeActiveClass('.sidebar__pages>.is-active');
+    // remove active class from button and page
+    removeActiveClass('.nav__btn.is-active');
+    removeActiveClass('.page.is-active');
 
-      // active clicked button
-      target.classList.add('is-active');
+    // add active class to button and page
+    const page = document.getElementById(target.dataset.page);
 
-      // active page based on button data-page
-      const page = document.getElementById(target.dataset.page);
-      page.classList.add('is-active');
-    }
+    target.classList.add('is-active');
+    page.classList.add('is-active');
   });
 });

@@ -1,5 +1,5 @@
 const links = document.querySelector('.links');
-const lastActive = links.querySelector('.active');
+let lastActive = links.querySelector('.active');
 
 links.addEventListener('click', (el) => {
   // select li from a
