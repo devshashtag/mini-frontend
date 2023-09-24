@@ -13,7 +13,7 @@ async function displayCards(root = '/mini-frontend') {
       <div class="projects__card">
           <img src="${root + project.image}" alt="${project.name}" loading="lazy" />
           <div class="card__caption">${project.name}</div>
-          <a href="${projectRoot + project.url}" target="_blank"></a>
+          <a href="${project?.url ? projectRoot + project.url : project.source}" target="_blank"></a>
       </div>
     `;
 

@@ -80,7 +80,7 @@
     "image": "/assets/images/eve.png"
   },
   {
-    "url": "/javascript-mini",
+    "source": "https://github.com/devshashtag/mini-frontend/tree/main/projects/javascript-mini",
     "name": "javascript mini",
     "image": "/assets/images/javascript-mini.png"
   },
