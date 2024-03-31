@@ -50,6 +50,11 @@
     "image": "/assets/images/image-filters.png"
   },
   {
+    "url": "/image-spliter",
+    "name": "image spliter",
+    "image": "/assets/images/image-spliter.png"
+  },
+  {
     "url": "/video-cover",
     "name": "video cover",
     "image": "/assets/images/video-cover.png"

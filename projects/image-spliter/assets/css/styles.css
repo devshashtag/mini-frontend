@@ -1,0 +1,279 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 0.625rem;
+  height: 100%;
+}
+@media (min-width: 576px) {
+  html {
+    font-size: 0.75rem;
+  }
+}
+
+body {
+  height: 100%;
+}
+
+.container .edit__area .area__filters {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container .edit__area .area__filters:focus {
+  outline: none !important;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  min-height: 100%;
+}
+.container .upload-area,
+.container .upload-file {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .upload-area {
+  gap: 3rem;
+  width: 80vw;
+  max-width: 100rem;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem #888, 0 0 1rem #777 inset;
+}
+.container .upload-area.hide {
+  display: none;
+}
+.container .upload-area.highlight {
+  box-shadow: 0 0 1rem #aaa, 0 0 1rem #999 inset;
+  background-color: #fff;
+}
+.container .upload-area .area-title {
+  font-size: 1.3rem;
+}
+@media (min-width: 576px) {
+  .container .upload-area .area-title {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .container .upload-area .area-title {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 992px) {
+  .container .upload-area .area-title {
+    font-size: 2rem;
+  }
+}
+.container .upload-file {
+  width: 70%;
+  padding: 2rem 1rem;
+  border: 1px dashed darkred;
+  color: darkred;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem #855, 0 0 0.5rem #744 inset;
+}
+.container .upload-file .file-btn {
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+  .container .upload-file .file-btn {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .container .upload-file .file-btn {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 992px) {
+  .container .upload-file .file-btn {
+    font-size: 1.5rem;
+  }
+}
+.container .upload-file input {
+  display: none;
+}
+.container .edit__area {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 2rem 5rem;
+}
+.container .edit__area.show {
+  display: flex;
+}
+.container .edit__area .area__img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.container .edit__area .area__img #img-filter {
+  width: 80%;
+}
+.container .edit__area .img__split {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #855;
+  line-height: 0;
+  padding: 1rem;
+}
+.container .edit__area .img__split .group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .edit__area .img__split img {
+  margin: 1px;
+}
+.container .edit__area #download {
+  cursor: pointer;
+  background-color: #b2c7ce;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+}
+.container .edit__area .area__split {
+  border: 1px dotted #888;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+.container .edit__area .area__split span {
+  text-transform: capitalize;
+  display: inline-block;
+  width: 5rem;
+}
+.container .edit__area .area__split input {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+.container .edit__area .area__split button {
+  cursor: pointer;
+  background-color: #b2c7ce;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+}
+.container .edit__area .filter-grayscale {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+.container .edit__area .filter-grayscale2 {
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
+}
+.container .edit__area .filter-blur {
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+}
+.container .edit__area .filter-contrast {
+  -webkit-filter: contrast(200%);
+  filter: contrast(200%);
+}
+.container .edit__area .filter-hue-rotate {
+  -webkit-filter: hue-rotate(90deg);
+  filter: hue-rotate(90deg);
+}
+.container .edit__area .filter-drop-shadow {
+  -webkit-filter: drop-shadow(0px 0px 10px blue) invert(75%);
+  filter: drop-shadow(0px 0px 10px blue) invert(75%);
+}
+.container .edit__area .filter-brightness {
+  -webkit-filter: brightness(200%);
+  filter: brightness(200%);
+}
+.container .edit__area .filter-invert {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+.container .edit__area .filter-saturate {
+  -webkit-filter: saturate(800%);
+  filter: saturate(800%);
+}
+.container .edit__area .filter-sepia {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+}
+.container .edit__area .filter-multiple {
+  -webkit-filter: contrast(200%) brightness(150%);
+  filter: contrast(200%) brightness(150%);
+}
+.container .edit__area .area__filters {
+  width: 100%;
+}
+.container .edit__area .area__filters ul {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.container .edit__area .area__filters ul li {
+  cursor: pointer;
+}
+.container .edit__area .area__filters .tool {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .edit__area .area__filters .tool img {
+  width: 5rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+.container .edit__area .area__filters .tool .title {
+  text-align: center;
+  color: #dedede;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

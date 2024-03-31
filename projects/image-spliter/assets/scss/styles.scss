@@ -1,0 +1,273 @@
+// To ensure use of utf-8 encoding format
+@charset 'UTF-8';
+
+//? base & abstracts
+@import 'base';
+
+// styles
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  min-height: 100%;
+
+  .upload-area,
+  .upload-file {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .upload-area {
+    gap: 3rem;
+    width: 80vw;
+    max-width: 100rem;
+    aspect-ratio: 16 / 9;
+
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #888, 0 0 1rem #777 inset;
+
+    &.hide {
+      display: none;
+    }
+
+    &.highlight {
+      box-shadow: 0 0 1rem #aaa, 0 0 1rem #999 inset;
+      background-color: #fff;
+    }
+
+    .area-title {
+      font-size: 1.3rem;
+
+      @include breakpoint(sm) {
+        font-size: 1.5rem;
+      }
+
+      @include breakpoint(md) {
+        font-size: 1.8rem;
+      }
+
+      @include breakpoint(lg) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .upload-file {
+    width: 70%;
+    padding: 2rem 1rem;
+    border: 1px dashed darkred;
+    color: darkred;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem #855, 0 0 0.5rem #744 inset;
+
+    .file-btn {
+      font-size: 1rem;
+
+      @include breakpoint(sm) {
+        font-size: 1rem;
+      }
+
+      @include breakpoint(md) {
+        font-size: 1.3rem;
+      }
+
+      @include breakpoint(lg) {
+        font-size: 1.5rem;
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  // image filter section
+  .edit__area {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 2rem 5rem;
+
+    &.show {
+      display: flex;
+    }
+
+    .area__img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      #img-filter {
+        width: 80%;
+      }
+    }
+
+    .img__split {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      border: 1px dashed #855;
+      line-height: 0;
+      padding: 1rem;
+
+      .group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      img {
+        margin: 1px;
+      }
+    }
+
+    #download {
+      cursor: pointer;
+      background-color: #b2c7ce;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    .area__split {
+      border: 1px dotted #888;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      gap: 1rem;
+
+      span {
+        text-transform: capitalize;
+        display: inline-block;
+        width: 5rem;
+      }
+
+      input {
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+      }
+
+      button {
+        cursor: pointer;
+        background-color: #b2c7ce;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        width: 100%;
+      }
+    }
+
+    .filter-grayscale {
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);
+    }
+
+    .filter-grayscale2 {
+      -webkit-filter: grayscale(50%);
+      filter: grayscale(50%);
+    }
+
+    .filter-blur {
+      -webkit-filter: blur(1px);
+      filter: blur(1px);
+    }
+
+    .filter-contrast {
+      -webkit-filter: contrast(200%);
+      filter: contrast(200%);
+    }
+
+    .filter-hue-rotate {
+      -webkit-filter: hue-rotate(90deg);
+      filter: hue-rotate(90deg);
+    }
+
+    .filter-drop-shadow {
+      -webkit-filter: drop-shadow(0px 0px 10px blue) invert(75%);
+      filter: drop-shadow(0px 0px 10px blue) invert(75%);
+    }
+
+    .filter-brightness {
+      -webkit-filter: brightness(200%);
+      filter: brightness(200%);
+    }
+
+    .filter-invert {
+      -webkit-filter: invert(100%);
+      filter: invert(100%);
+    }
+
+    .filter-saturate {
+      -webkit-filter: saturate(800%);
+      filter: saturate(800%);
+    }
+
+    .filter-sepia {
+      -webkit-filter: sepia(100%);
+      filter: sepia(100%);
+    }
+
+    .filter-multiple {
+      -webkit-filter: contrast(200%) brightness(150%);
+      filter: contrast(200%) brightness(150%);
+    }
+
+    .area__filters {
+      width: 100%;
+      @extend %no-select;
+
+      ul {
+        padding: 1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        gap: 1rem;
+
+        li {
+          cursor: pointer;
+        }
+      }
+
+      .tool {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 5rem;
+          aspect-ratio: 1;
+          object-fit: cover;
+          border-radius: 0.5rem;
+        }
+
+        .title {
+          text-align: center;
+          color: #dedede;
+          text-transform: capitalize;
+          font-size: 0.9rem;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}

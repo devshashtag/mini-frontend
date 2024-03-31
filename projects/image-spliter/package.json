@@ -1,0 +1,21 @@
+{
+  "name": "image-splitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch assets/scss/styles.scss assets/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devshashtag/mini-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devshashtag/mini-frontend.git/issues"
+  },
+  "homepage": "https://github.com/devshashtag/mini-frontend.git#readme"
+}
