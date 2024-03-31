@@ -55,7 +55,6 @@ body {
   background-color: #eee;
   min-height: 100%;
 }
-.container .upload-area,
 .container .upload-file {
   cursor: pointer;
   display: flex;
@@ -64,8 +63,13 @@ body {
   align-items: center;
 }
 .container .upload-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 3rem;
-  width: 80vw;
+  width: 40vw;
+  min-width: 30rem;
   max-width: 100rem;
   aspect-ratio: 16/9;
   border-radius: 1rem;
@@ -79,21 +83,16 @@ body {
   background-color: #fff;
 }
 .container .upload-area .area-title {
-  font-size: 1.3rem;
-}
-@media (min-width: 576px) {
-  .container .upload-area .area-title {
-    font-size: 1.5rem;
-  }
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   .container .upload-area .area-title {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 992px) {
   .container .upload-area .area-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 .container .upload-file {
@@ -153,17 +152,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1px;
+  padding: 1rem;
   border: 1px dashed #855;
   line-height: 0;
-  padding: 1rem;
 }
 .container .edit__area .img__split .group {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.container .edit__area .img__split img {
-  margin: 1px;
+  gap: inherit;
 }
 .container .edit__area #download {
   cursor: pointer;

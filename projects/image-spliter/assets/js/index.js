@@ -81,23 +81,25 @@ window.addEventListener('DOMContentLoaded', function () {
     reader.readAsDataURL(image);
   }
 
-  areaFilters.addEventListener('click', (e) => {
+  function updateImageFilter(e) {
     if (e.target.tagName == 'IMG') {
-      if (lastFilter) {
-        imageFilter.classList.remove(lastFilter);
-      }
+      // remove last filter if applied before
+      if (lastFilter) imageFilter.classList.remove(lastFilter);
 
-      let filter = e.target.classList[0];
-      imageFilter.classList.add(filter);
-      lastFilter = filter;
+      // add new filter
+      lastFilter = e.target.classList[0];
+      imageFilter.classList.add(lastFilter);
     }
-  });
+  }
 
-  splitBtn.addEventListener('click', () => {
+  function splitImage() {
     const columns = columnsInput.value;
     const rows = rowsInput.value;
-    const section_width = imageFilter.naturalWidth / columns;
-    const section_height = imageFilter.naturalHeight / rows;
+    const width = imageFilter.naturalWidth;
+    const height = imageFilter.naturalHeight;
+    const section_width = width / columns;
+    const section_height = height / rows;
+    const cutSize = (((width - columns) / width) * 80) / columns + '%';
     const filter = getComputedStyle(imageFilter)['filter'];
 
     imgSplit.innerHTML = '';
@@ -107,25 +109,26 @@ window.addEventListener('DOMContentLoaded', function () {
       group.classList.add('group');
 
       for (var x = 0; x < columns; x++) {
+        const img = document.createElement('img');
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
-        const img = document.createElement('img');
 
         canvas.width = Math.ceil(section_width);
         canvas.height = Math.ceil(section_height);
         context.filter = filter;
         context.drawImage(imageFilter, x * section_width, y * section_height, section_width, section_height, 0, 0, canvas.width, canvas.height);
+
         img.src = canvas.toDataURL();
-        img.style.width = `${Math.floor(100 / columns)}%`;
+        img.style.width = cutSize;
 
         group.appendChild(img);
       }
 
       imgSplit.appendChild(group);
     }
-  });
+  }
 
-  downloadBtn.addEventListener('click', () => {
+  function downloadImages() {
     const images = imgSplit.querySelectorAll('img');
     let counter = 1;
 
@@ -137,5 +140,9 @@ window.addEventListener('DOMContentLoaded', function () {
         a.click();
       }, counter++ * 100);
     }
-  });
+  }
+
+  areaFilters.addEventListener('click', updateImageFilter);
+  splitBtn.addEventListener('click', splitImage);
+  downloadBtn.addEventListener('click', downloadImages);
 });

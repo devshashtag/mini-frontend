@@ -12,7 +12,6 @@
   background-color: #eee;
   min-height: 100%;
 
-  .upload-area,
   .upload-file {
     cursor: pointer;
 
@@ -23,8 +22,13 @@
   }
 
   .upload-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 3rem;
-    width: 80vw;
+    width: 40vw;
+    min-width: 30rem;
     max-width: 100rem;
     aspect-ratio: 16 / 9;
 
@@ -41,18 +45,18 @@
     }
 
     .area-title {
-      font-size: 1.3rem;
+      font-size: 1rem;
 
-      @include breakpoint(sm) {
-        font-size: 1.5rem;
-      }
+      // @include breakpoint(sm) {
+      //   font-size: 1rem;
+      // }
 
       @include breakpoint(md) {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
       }
 
       @include breakpoint(lg) {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
     }
   }
@@ -118,19 +122,18 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 1px;
 
+      padding: 1rem;
       border: 1px dashed #855;
       line-height: 0;
-      padding: 1rem;
 
       .group {
         display: flex;
         justify-content: center;
         align-items: center;
-      }
 
-      img {
-        margin: 1px;
+        gap: inherit;
       }
     }
 
